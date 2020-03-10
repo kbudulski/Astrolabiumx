@@ -1,4 +1,6 @@
-  import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-header',
@@ -6,11 +8,14 @@
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  active: any;
 
-  constructor() { }
-
-  ngOnInit() {
+  constructor(public route: ActivatedRoute ) {}
+  links = [
+    { title: 'Daily', fragment: 'space-gallery' },
+    { title: 'Mars', fragment: 'mars-weather' },
+    { title: 'SpaceX', fragment: 'spacex' },
+  ];
+  ngOnInit(): void {
   }
 
 }

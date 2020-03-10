@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DailyPictureService } from './daily-picture.service';
+import { DailyPictureModel } from './daily-picture.model';
 
 @Component({
   selector: 'app-pic-of-the-day',
@@ -6,10 +8,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pic-of-the-day.component.scss']
 })
 export class PicOfTheDayComponent implements OnInit {
+  dailyPictureModel: DailyPictureModel;
+  fakeType = 'image';
 
-  constructor() { }
+  constructor(private dailyPictureService: DailyPictureService) { }
 
-  ngOnInit() {
+  getDailyPicture(): void {
+    this.dailyPictureService.getApodConfig()
+      .subscribe(dailyPictureModel => (this.dailyPictureModel = dailyPictureModel));
   }
 
+  ngOnInit() {
+     //this.getDailyPicture();
+  }
 }

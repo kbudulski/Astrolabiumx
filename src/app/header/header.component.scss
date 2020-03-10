@@ -1,0 +1,25 @@
+$tabTextColor: beige;
+$highlightColor: bisque;
+
+a {
+  font-family: Lato, serif;
+  font-size: 1.4rem;
+  color: $highlightColor;
+  &:hover {
+    color: beige;
+  }
+}
+
+.pageTitle {
+  color: lightcoral;
+}
+
+#navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+body {
+  padding-top: 45px;
+}

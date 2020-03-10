@@ -1,10 +1,7 @@
 <app-header></app-header>
-<div class="container">
-  <div class="row">
-    <div class="col-md-12 ">
-      <app-space-gallery></app-space-gallery>
-      <app-mars-weather></app-mars-weather>
-      <app-spacex></app-spacex>
-    </div>
+<div id="page-container">
+  <div id="content-wrap">
+    <router-outlet></router-outlet>
   </div>
+  <app-footer></app-footer>
 </div>

@@ -1,0 +1,24 @@
+<footer id="footer" class="footer-1">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="pictureCol col">
+        <img src="https://us.edu.pl/wp-content/uploads/strona-g%C5%82%C3%B3wna/logo/logo-U%C5%9A.png" alt="uś logo"
+             id="usLogo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a3/NASA_Worm_logo.svg" alt="nasa logo" id="nasaLogo">
+      </div>
+      <div class="col">
+        <div class="text text-center">© 2020 {{ 'FOOTER.COPYRIGHT' | translate }}: Krystian Budulski</div>
+      </div>
+      <div class="col">
+        <div class="d-flex justify-content-end" style="padding-right: 20px">
+        <button mat-button [matMenuTriggerFor]="aboveMenu">{{ 'FOOTER.LANGUAGE' | translate }}</button>
+        <mat-menu #aboveMenu="matMenu" yPosition="above">
+          <button mat-menu-item style="background: #2c2c2c" (click)="useAng()">English</button>
+          <button mat-menu-item style="background: #2c2c2c" (click)="usePol()">Polski</button>
+        </mat-menu>
+          <button mat-button (click)="onFormButtonClick()">{{ 'FOOTER.CONTACT' | translate }}</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

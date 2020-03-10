@@ -1,0 +1,52 @@
+<div class="container">
+  <mat-dialog-content>
+    <h3>Contact me!</h3>
+    <hr>
+    <div class="row">
+      <div class="col-6">
+        <mat-form-field appearance="outline">
+          <mat-label>{{'CONTACT.FIRSTNAME' | translate }}</mat-label>
+          <input matInput [(ngModel)]="firstName">
+        </mat-form-field>
+      </div>
+
+      <div class="col-6">
+        <mat-form-field appearance="outline">
+          <mat-label>{{'CONTACT.LASTNAME' | translate }}</mat-label>
+          <input matInput [(ngModel)]="lastName">
+        </mat-form-field>
+      </div>
+    </div>
+
+  <div class="row">
+    <div class="col-6">
+      <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input matInput placeholder="pat@example.com" [formControl]="email" required>
+        <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+      </mat-form-field>
+    </div>
+    <div class="col-6">
+      <mat-form-field appearance="fill">
+        <mat-label>{{'CONTACT.COUNTRY' | translate }}</mat-label>
+        <mat-select [(ngModel)]="country">
+          <mat-option value="australia">Australia</mat-option>
+          <mat-option value="canada">{{'CONTACT.CANADA' | translate }}</mat-option>
+          <mat-option value="usa">USA</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </div>
+
+  <div class="row">
+    <mat-form-field appearance="outline">
+      <mat-label>{{'CONTACT.SUBJECT' | translate }}</mat-label>
+      <textarea matInput style="height: 100px"></textarea>
+    </mat-form-field>
+
+  </div>
+  <button mat-raised-button (click)="onSubmitClick()" color="primary" [disabled]=email.invalid>{{'CONTACT.SUBMIT' | translate }}</button>
+  </mat-dialog-content>
+
+</div>
+

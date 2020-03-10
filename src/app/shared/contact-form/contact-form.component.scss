@@ -1,0 +1,19 @@
+form {
+  background: #516db3;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+input[type=submit] {
+  background-color: cornflowerblue;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  &:hover {
+    background-color: #516db3;
+  }
+}

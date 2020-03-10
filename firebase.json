@@ -1,0 +1,17 @@
+{
+  "hosting": {
+    "site": "space-center-project",
+    "public": "dist/my-angular-project",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

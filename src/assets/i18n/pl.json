@@ -1,0 +1,24 @@
+{
+  "HOMEPAGE": {
+    "WELCOME": "Witaj w Centrum Badawczym!"
+  },
+  "HEADER": {
+    "TITLE": "Centrum Badawcze",
+    "APOD": "Zdjęcie Dnia"
+  },
+  "FOOTER": {
+    "LANGUAGE": "Język",
+    "CONTACT": "Kontakt",
+    "COPYRIGHT": "Prawa autorskie"
+  },
+  "CONTACT": {
+    "FIRSTNAME": "Imię",
+    "LASTNAME": "Nazwisko",
+    "COUNTRY": "Państwo",
+    "SUBJECT": "Temat",
+    "SUBMIT": "Wyślij",
+    "CANADA": "Kanada",
+    "EMPTYMAIL": "Wprowadź wartość",
+    "WRONGMAIL": "Niepoprawny email"
+  }
+}
