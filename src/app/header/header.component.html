@@ -3,7 +3,7 @@
     class="fa fa-space-shuttle"></i></a></mdb-navbar-brand>
   <links>
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item" *ngFor="let link of links">
+      <li class="nav-item" *ngFor="let link of links" [routerLinkActive]="['active']">
         <a class="nav-link" [routerLink]=link.fragment>{{ link.title | translate }}</a>
       </li>
     </ul>

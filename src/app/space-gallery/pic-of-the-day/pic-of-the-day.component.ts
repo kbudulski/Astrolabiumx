@@ -19,6 +19,6 @@ export class PicOfTheDayComponent implements OnInit {
   }
 
   ngOnInit() {
-      //this.getDailyPicture();
+      this.getDailyPicture();
   }
 }
