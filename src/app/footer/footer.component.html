@@ -13,10 +13,10 @@
         <div class="d-flex justify-content-end" style="padding-right: 20px">
         <button mat-button [matMenuTriggerFor]="aboveMenu">{{ 'FOOTER.LANGUAGE' | translate }}</button>
         <mat-menu #aboveMenu="matMenu" yPosition="above">
-          <button mat-menu-item style="background: #2c2c2c" (click)="useAng()">English</button>
-          <button mat-menu-item style="background: #2c2c2c" (click)="usePol()">Polski</button>
+          <button mat-menu-item (click)="useAng()">English</button>
+          <button mat-menu-item (click)="usePol()">Polski</button>
         </mat-menu>
-          <button mat-button (click)="onFormButtonClick()">{{ 'FOOTER.CONTACT' | translate }}</button>
+          <button mat-button (click)="onFormButtonClick()" class="contact">{{ 'FOOTER.CONTACT' | translate }}</button>
         </div>
       </div>
     </div>

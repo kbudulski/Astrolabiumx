@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import { NgwWowService } from 'ngx-wow';
 
 @Component({
   selector: 'app-root',
@@ -8,8 +9,8 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class AppComponent {
   title = 'my-angular-project';
-
-  constructor(public translate: TranslateService) {
+  loading: boolean;
+  constructor(public translate: TranslateService, private wowService: NgwWowService) {
     translate.addLangs(['pl', 'en']);
     translate.setDefaultLang('en');
 
@@ -20,5 +21,7 @@ export class AppComponent {
     } else {
       translate.use(browserLang.match(/pl|en/) ? browserLang : 'pl');
     }
+    this.loading = true;
+    this.wowService.init();
   }
 }

@@ -1,25 +1,26 @@
 $tabTextColor: beige;
-$highlightColor: bisque;
+$highlightColor: #ff983d;
 
 a {
   font-family: Lato, serif;
-  font-size: 1.4rem;
-  color: $highlightColor;
-  &:hover {
-    color: beige;
+  font-size: 1.5rem;
+}
+
+mdb-navbar {
+  height: 20px;
+  .nav-item .nav-link {
+    display:block;
+    color:white;
+
+    &:hover {
+      color: #bf5c63;
+    }
+    &:active {
+      background-color:darkred;
+    }
   }
 }
 
-.pageTitle {
-  color: lightcoral;
-}
-
-#navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
-body {
-  padding-top: 45px;
+.navbar-brand {
+  color: #f06865;
 }

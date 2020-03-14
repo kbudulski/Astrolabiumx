@@ -1,18 +1,35 @@
+<div class="background" style="background-color: #df605d;
+ background-size: cover">
 <div class="wrap">
-  <table mat-table [dataSource]="dataSource" multiTemplateDataRows matSort class="mat-elevation-z8">
+  <mat-form-field style="width: 15%; height: 4em" appearance="fill">
+    <mat-label>{{ 'XTABLE.FILTER' | translate }}</mat-label>
+    <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Falcon 1">
+  </mat-form-field>
+
+  <mat-form-field style="width: 15%; height: 4em" appearance="fill">
+    <mat-label>{{ 'XTABLE.OPTION' | translate}}</mat-label>
+    <mat-select [(value)]="flightSelection" (selectionChange)="updateFlights()">
+      <mat-option value="all">{{ 'XTABLE.ALL' | translate}}</mat-option>
+      <mat-option value="past">{{ 'XTABLE.PAST' | translate}}</mat-option>
+      <mat-option value="upcoming">{{ 'XTABLE.UPCOMING' | translate}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <div id="datatablewrap" class="mat-elevation-z8">
+  <table mat-table [dataSource]="dataSource" multiTemplateDataRows matSort class="table-hover">
 
     <ng-container matColumnDef="flight_number">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header> Flight No.</th>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> {{ 'XTABLE.NUMBER' | translate}}</th>
       <td mat-cell *matCellDef="let row"> {{row.flight_number}} </td>
     </ng-container>
 
     <ng-container matColumnDef="rocket_name">
-      <th mat-header-cell *matHeaderCellDef> Rocket name</th>
+      <th mat-header-cell *matHeaderCellDef> {{ 'XTABLE.ROCKETNAME' | translate}}</th>
       <td mat-cell *matCellDef="let row"> {{row.rocket.rocket_name}} </td>
     </ng-container>
 
     <ng-container matColumnDef="launch_date_local">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header> Date</th>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> {{ 'XTABLE.DATE' | translate}}</th>
       <td mat-cell *matCellDef="let row"> {{row.launch_date_local | date }} </td>
     </ng-container>
 
@@ -25,14 +42,13 @@
       <td mat-cell *matCellDef="let element" [attr.colspan]="displayedColumns.length">
         <div class="element-detail"
              [@detailExpand]="element == expandedElement ? 'expanded' : 'collapsed'">
-          <div class="container justify-content-center align-content-center">
+          <div class="container">
             <div class="row">
               <div class="col-md-2">
-                <div class="element-symbol"><img src="{{ element.links.mission_patch }}"
-                                                 style="max-height: 100px; padding: 5px" alt=""></div>
+                <div class="element-symbol"><img src="{{ element.links.mission_patch }}" alt=""></div>
               </div>
               <div class="col-md-10 col-sm-8">
-                <div class="example-element-description">{{ element.details }}</div>
+                <div *ngIf="element.details" class="element-description">{{ element.details }}</div>
               </div>
             </div>
           </div>
@@ -40,12 +56,14 @@
       </td>
     </ng-container>
 
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
     <tr mat-row *matRowDef="let element; columns: displayedColumns;" class="element-row"
-        [class.example-expanded-row]="expandedElement === element"
+        [class.expanded-row]="expandedElement === element"
         (click)="expandedElement = expandedElement === element ? null : element">>
     </tr>
     <tr mat-row *matRowDef="let row; columns: ['expandedDetail']" class="detail-row"></tr>
   </table>
-  <mat-paginator [pageSizeOptions]="[10]" showFirstLastButtons class="mat-elevation-z8"></mat-paginator>
+  </div>
+  <mat-paginator [pageSizeOptions]="[15,30,50]" showFirstLastButtons></mat-paginator>
+</div>
 </div>

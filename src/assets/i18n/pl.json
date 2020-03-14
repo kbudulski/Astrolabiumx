@@ -1,10 +1,11 @@
 {
   "HOMEPAGE": {
-    "WELCOME": "Witaj w Centrum Badawczym!"
+    "WELCOME": "Project: Astrolabium"
   },
   "HEADER": {
-    "TITLE": "Centrum Badawcze",
-    "APOD": "Zdjęcie Dnia"
+    "TITLE": "Home",
+    "APOD": "Zdjęcie Dnia",
+    "XFLIGHTS": "Loty SpaceX"
   },
   "FOOTER": {
     "LANGUAGE": "Język",
@@ -12,6 +13,7 @@
     "COPYRIGHT": "Prawa autorskie"
   },
   "CONTACT": {
+    "TITLE": "Napisz do mnie!",
     "FIRSTNAME": "Imię",
     "LASTNAME": "Nazwisko",
     "COUNTRY": "Państwo",
@@ -20,5 +22,15 @@
     "CANADA": "Kanada",
     "EMPTYMAIL": "Wprowadź wartość",
     "WRONGMAIL": "Niepoprawny email"
+  },
+  "XTABLE": {
+    "FILTER": "Szukaj",
+    "OPTION": "Wybierz loty",
+    "ALL": "Wszystkie",
+    "PAST": "Przeszłe",
+    "UPCOMING": "Przyszłe",
+    "NUMBER": "Numer lotu",
+    "ROCKETNAME": "Nazwa rakiety",
+    "DATE": "Data"
   }
 }

@@ -29,6 +29,12 @@ import { DataTableComponent } from './spacex/data-table/data-table.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { NgHttpLoaderModule } from 'ng-http-loader';
+import { MatInputModule } from '@angular/material/input';
+import { NgwWowModule } from 'ngx-wow';
+
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -71,7 +77,12 @@ export function HttpLoaderFactory(http: HttpClient) {
     MatMenuModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    MatSidenavModule,
+    MatProgressBarModule,
+    NgHttpLoaderModule.forRoot(),
+    MatInputModule,
+    NgwWowModule
   ],
   providers: [
   ],

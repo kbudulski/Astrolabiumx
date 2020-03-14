@@ -1,9 +1,11 @@
-<ul ngbNav [activeId]="route.fragment | async" class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark"
-    id="navbar">
-
-  <li [ngbNavItem]=""><a ngbNavLink routerLink=home-page class="pageTitle">{{ 'HEADER.TITLE' | translate }}  <i
-    class="fa fa-space-shuttle"></i></a></li>
-  <li [ngbNavItem]="link.fragment" *ngFor="let link of links">
-    <a ngbNavLink [routerLink]=link.fragment>{{ link.title }}</a>
-  </li>
-</ul>
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" [containerInside]="false">
+  <mdb-navbar-brand><a class="navbar-brand" routerLink=home-page>{{ 'HEADER.TITLE' | translate }}  <i
+    class="fa fa-space-shuttle"></i></a></mdb-navbar-brand>
+  <links>
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item" *ngFor="let link of links">
+        <a class="nav-link" [routerLink]=link.fragment>{{ link.title | translate }}</a>
+      </li>
+    </ul>
+  </links>
+</mdb-navbar>

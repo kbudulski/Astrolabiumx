@@ -20,11 +20,31 @@ img {
   height: 100%;
 }
 
+#title {
+  margin-top: 1em;
+  margin-bottom: 0.6em;
+  text-align: center;
+}
+
 #description {
-  padding: 4em;
+  text-align: justify;
+}
+
+
+@media (max-width: 480px) {
+  h2 {
+    font-size: 35px;
+  }
   p {
-    padding: 25px 20px;
-    font-family: "Dubai Light", serif;
-    font-size: 2em;
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 480px) {
+  h2 {
+    font-size: 60px;
+  }
+  p {
+    font-size: 30px;
   }
 }

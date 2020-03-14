@@ -1,17 +1,27 @@
-table {
+table.mat-table {
   width: 100%;
+}
+
+.wrap {
+  margin: 80px
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+#datatablewrap {
+  height: 60vh;
+  overflow: auto;
 }
 
 tr.detail-row {
   height: 0;
-}
-
-tr.element-row:not(.example-expanded-row):hover {
-  background: #a0a0a0;
-}
-
-tr.element-row:not(.example-expanded-row):active {
-  background: #efefef;
 }
 
 .element-row td {
@@ -24,7 +34,35 @@ tr.element-row:not(.example-expanded-row):active {
 }
 
 .element-symbol {
-  font-weight: bold;
-  font-size: 40px;
-  line-height: normal;
+  overflow: auto;
+  padding: 10px;
+  img {
+    height: 100px;
+  }
+}
+
+
+.element-description {
+  padding: 10px;
+  text-align: justify;
+}
+
+@media (max-width: 480px) {
+  th, td {
+    font-size: 12px;
+  }
+  .element-symbol {
+    display: none;
+  }
+  #datatablewrap {
+    height: 65vh;
+    bottom: 0;
+  }
+  .wrap {
+    padding: 0;
+    margin: 60px 0 0;
+  }
+  mat-form-field {
+    display: none;
+  }
 }

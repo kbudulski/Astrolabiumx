@@ -1,10 +1,11 @@
 {
   "HOMEPAGE": {
-    "WELCOME": "Welcome to Space Center!"
+    "WELCOME": "Project: Astrolabium"
   },
   "HEADER": {
-    "TITLE": "Space Center",
-    "APOD": "Daily Photo"
+    "TITLE": "Home",
+    "APOD": "Daily Photo",
+    "XFLIGHTS": "SpaceX Flights"
   },
   "FOOTER": {
     "LANGUAGE": "Language",
@@ -12,6 +13,7 @@
     "COPYRIGHT": "Copyright"
   },
   "CONTACT": {
+    "TITLE": "Contact me!",
     "FIRSTNAME": "First name",
     "LASTNAME": "Last name",
     "COUNTRY": "Country",
@@ -20,5 +22,15 @@
     "CANADA": "Canada",
     "EMPTYMAIL": "You must enter a value",
     "WRONGMAIL": "Not a valid email"
+  },
+  "XTABLE": {
+    "FILTER": "Search",
+    "OPTION": "Select flights",
+    "ALL": "All",
+    "PAST": "Past",
+    "UPCOMING": "Upcoming",
+    "NUMBER": "Flight No.",
+    "ROCKETNAME": "Rocket name",
+    "DATE": "Date"
   }
 }

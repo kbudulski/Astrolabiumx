@@ -13,7 +13,6 @@ export class FooterComponent {
   constructor(public dialog: MatDialog, public translate: TranslateService) {
   }
 
-  appComponent: AppComponent = new AppComponent(this.translate);
   contact: ContactFormComponent = new ContactFormComponent(this.dialog, this.translate);
 
   useAng() {
